@@ -261,7 +261,7 @@ BerlinNet:
       unbondingPeriodMultiplier: 7
       unstakeSlotMax: 1000
 SejongNet:
-  version: "v1.0.4"
+  version: "v1.0.5"
   only_goloop: false
   info:
     api_endpoint: "https://sejong.net.solidwallet.io"
