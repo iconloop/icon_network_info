@@ -1,0 +1,67 @@
+name: Network Info
+
+on:
+  push:
+    paths:
+      - "info.yml"
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - run:
+          pip install -r requirements.txt
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Run main.py
+        run: |
+          python main.py config
+          python main.py restore
+        env:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_default_region: ${{ secrets.AWS_REGION }}
+          aws_bucket: ${{ secrets.AWS_BUCKET }}
+          aws_cf_id: ${{ secrets.AWS_CF_ID }}
+      
+      - name: Commit changes
+        run: |
+          cd /home/runner/work/icon2-network-info/icon2-network-info
+          git config --global user.email "dhgwak@iconloop.com"
+          git config --global user.name "dhgwak"
+          git commit -am "Update configuration"
+          git push -u origin main
+      
+      - name: Install AWS CLI
+        run: pip3 install awscli --upgrade --user
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      
+      - name: Deploy to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+          AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+        run: |
+          aws s3 cp /home/runner/work/icon2-network-info/icon2-network-info/icon2/ s3://${{secrets.AWS_BUCKET}}/node_info/ --recursive
+      - name: Invalidate CloudFront Cache
+        run: aws cloudfront create-invalidation --distribution-id ${{secrets.AWS_CF_ID}} --paths "/*"
