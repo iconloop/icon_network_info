@@ -162,7 +162,7 @@ LisbonNet:
       nid: '0x2'
     IISS: ""
 BerlinNet:
-  version: "v1.0.7"
+  version: "v1.0.8"
   only_goloop: false
   info:
     api_endpoint: "https://berlin.net.solidwallet.io"
@@ -261,7 +261,7 @@ BerlinNet:
       unbondingPeriodMultiplier: 7
       unstakeSlotMax: 1000
 SejongNet:
-  version: "v1.0.3"
+  version: "v1.0.4"
   only_goloop: false
   info:
     api_endpoint: "https://sejong.net.solidwallet.io"
