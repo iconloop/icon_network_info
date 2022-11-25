@@ -39,13 +39,19 @@ jobs:
           aws_bucket: ${{ secrets.AWS_BUCKET }}
           aws_cf_id: ${{ secrets.AWS_CF_ID }}
       
-      - name: Commit changes
-        run: |
-          cd /home/runner/work/icon2_network_info/icon2_network_info
-          git config --global user.email "dhgwak@iconloop.com"
-          git config --global user.name "dhgwak"
-          git commit -am "Update configuration"
-          git push -u origin main
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: '.'
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+      
+      - name: Push commit
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.REPO_TOKEN }}
+          branch: "master"
+          force: true
       
       - name: Install AWS CLI
         run: pip3 install awscli --upgrade --user
