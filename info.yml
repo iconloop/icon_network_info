@@ -371,7 +371,7 @@ SejongNet:
       unbondingPeriodMultiplier: 7
       unstakeSlotMax: 1000
 WingNet:
-  version: "v1.0.0"
+  version: "v1.0.1"
   only_goloop: false
   info:
     api_endpoint: "http://20.20.6.78:9000"
