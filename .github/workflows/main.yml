@@ -41,7 +41,7 @@ jobs:
       
       - name: Commit changes
         run: |
-          cd /home/runner/work/icon2-network-info/icon2-network-info
+          cd /home/runner/work/icon2_network_info/icon2_network_info
           git config --global user.email "dhgwak@iconloop.com"
           git config --global user.name "dhgwak"
           git commit -am "Update configuration"
@@ -62,6 +62,6 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
           AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
         run: |
-          aws s3 cp /home/runner/work/icon2-network-info/icon2-network-info/icon2/ s3://${{secrets.AWS_BUCKET}}/node_info/ --recursive
+          aws s3 cp /home/runner/work/icon2_network_info/icon2_network_info/icon2/ s3://${{secrets.AWS_BUCKET}}/node_info/ --recursive
       - name: Invalidate CloudFront Cache
         run: aws cloudfront create-invalidation --distribution-id ${{secrets.AWS_CF_ID}} --paths "/*"
