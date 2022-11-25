@@ -70,7 +70,7 @@ MainNet:
               \n\"Hyperconnect the world\""
     IISS: ""
 LisbonNet:
-  version: "v1.0.2"
+  version: "v1.0.3"
   only_goloop: false
   info:
     api_endpoint: "https://lisbon.net.solidwallet.io"
