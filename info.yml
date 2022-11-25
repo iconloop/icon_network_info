@@ -1,0 +1,465 @@
+version: "v1.1.0"
+git_env:
+  aws_access_key_id: "aws_access_key_id"
+  aws_secret_access_key: "aws_secret_access_key"
+  aws_default_region: "aws_default_region"
+  aws_bucket: "aws_bucket"
+  aws_cf_id: "aws_cf_id"
+ctx_url: "https://networkinfo.solidwallet.io/node_info"
+restore_url: "https://networkinfo.solidwallet.io/info"
+restore:
+  MainNet_test:
+    index_url: "https://icon2-backup-va.s3.amazonaws.com/va/bk/s3sync/MainNet/20220104/file_list.txt?version=0104"
+    checksum_url: "https://icon2-backup-va.s3.amazonaws.com/va/bk/s3sync/MainNet/20220104/checksum.json?version=0104"
+  MainNet:
+    index_url: "https://icon2-backup-va.s3.amazonaws.com/va/bk/s3sync/MainNet/20221121/file_list.txt?version=1121"
+    checksum_url: "https://icon2-backup-va.s3.amazonaws.com/va/bk/s3sync/MainNet/20221121/checksum.json?version=1121"
+  LisbonNet:
+    index_url: "https://icon2-backup-jp.s3.ap-northeast-1.amazonaws.com/jp/bk/s3sync/LisbonNet/20221121/file_list.txt?version=1121"
+    checksum_url: "https://icon2-backup-jp.s3.ap-northeast-1.amazonaws.com/jp/bk/s3sync/LisbonNet/20221121/checksum.json?version=1121"
+  BerlinNet:
+    index_url: "https://icon2-backup-jp.s3.ap-northeast-1.amazonaws.com/jp/bk/s3sync/BerlinNet/20221121/file_list.txt?version=1121"
+    checksum_url: "https://icon2-backup-jp.s3.ap-northeast-1.amazonaws.com/jp/bk/s3sync/BerlinNet/20221121/checksum.json?version=1121"
+  SejongNet:
+    index_url: "https://icon2-backup-jp.s3.ap-northeast-1.amazonaws.com/jp/bk/s3sync/SejongNet/20221121/file_list.txt?version=1121"
+    checksum_url: "https://icon2-backup-jp.s3.ap-northeast-1.amazonaws.com/jp/bk/s3sync/SejongNet/20221121/checksum.json?version=1121"
+network_list:
+  - "MainNet"
+  - "LisbonNet"
+  - "BerlinNet"
+  - "SejongNet"
+MainNet:
+  version: "v1.0.3"
+  only_goloop: false
+  info:
+    api_endpoint: "https://preps.net.solidwallet.io/"
+    p2p_endpoint: "seed-ctz.solidwallet.io:7100"
+    channel: "icon_dex"
+    tracker: "https://tracker.icon.foundation/"
+    docker_tag: "iconloop/icon2-node:v1.2.14"
+    goloop_version: "https://github.com/icon-project/goloop/tree/v1.2.14"
+    transaction_fee: "on"
+    REVISION: "0x13"
+    SCORE_audit: "on"
+    UPDATE_DATE: "2022-10-26"
+    description: "-"
+  env:
+    CID: "0x1"
+    NID: "0x1"
+    ENDPOINT: "https://preps.net.solidwallet.io"
+    LOGDIR: "/goloop/logs"
+    LOGFILE: "/goloop/logs/goloop.log"
+    LOGROTATE_DATE: 14
+    LOG_OUTPUT_TYPE: "file"
+    SEEDS: "seed-ctz.solidwallet.io:7100"
+    GENESIS:
+      accounts:
+        - address: "hx54f7853dc6481b670caf69c5a27c7c8fe5be8269"
+          balance: "0x2961fff8ca4a62327800000"
+          name: "god"
+        - address: "hx1000000000000000000000000000000000000000"
+          balance: "0x0"
+          name: "treasury"
+      message: "A rhizome has no beginning or end; it is always in the middle, between\
+              \ things, interbeing, intermezzo. The tree is filiation, but the rhizome is\
+              \ alliance, uniquely alliance. The tree imposes the verb \"to be\" but the fabric\
+              \ of the rhizome is the conjunction, \"and ... and ...and...\"This conjunction\
+              \ carries enough force to shake and uproot the verb \"to be.\" Where are you\
+              \ going? Where are you coming from? What are you heading for? These are totally\
+              \ useless questions.\n\n - Mille Plateaux, Gilles Deleuze & Felix Guattari\n\
+              \n\"Hyperconnect the world\""
+    IISS: ""
+LisbonNet:
+  version: "v1.0.2"
+  only_goloop: false
+  info:
+    api_endpoint: "https://lisbon.net.solidwallet.io"
+    p2p_endpoint: "seed-lisbon.solidwallet.io:7100"
+    channel: "icon_dex"
+    tracker: "https://lisbon.tracker.solidwallet.io/"
+    docker_tag: "iconloop/goloop-icon:v1.3.0"
+    goloop_version: "https://github.com/icon-project/goloop/tree/v1.3.0"
+    transaction_fee: "on"
+    REVISION: "0x14"
+    SCORE_audit: "on"
+    UPDATE_DATE: "2022-11-11"
+    description: "-"
+  env:
+    CID: "0x23cdd9"
+    NID: "0x2"
+    ENDPOINT: "https://lisbon.net.solidwallet.io"
+    LOGFILE: "/goloop/logs/goloop.log"
+    LOGROTATE_DATE: 14
+    LOG_OUTPUT_TYPE: "file"
+    SEEDS: "seed-lisbon.solidwallet.io:7100"
+    GENESIS:
+      accounts:
+        - address: hx5a05b58a25a1e5ea0f1d5715e1f655dffc1fb30a
+          balance: '0x2961fff8ca4a62327800000'
+          name: god
+        - address: hx6e1dd0d4432620778b54b2bbc21ac3df961adf89
+          balance: '0x52b7d2dcc80cd2e4000000'
+          name: score_owner
+        - address: hx1000000000000000000000000000000000000000
+          balance: '0x0'
+          name: treasury
+        - address: cx0000000000000000000000000000000000000001
+          name: governance
+          score:
+            contentId: hash:{{ziphash:governance}}
+            contentType: application/zip
+            owner: hx6e1dd0d4432620778b54b2bbc21ac3df961adf89
+      chain:
+        auditEnabled: '0x1'
+        blockInterval: '0x7d0'
+        depositTerm: '0x13c680'
+        fee:
+          stepCosts:
+            apiCall: '0x2710'
+            contractCall: '0x61a8'
+            contractCreate: '0x3b9aca00'
+            contractDestruct: '-0x11170'
+            contractSet: '0x7530'
+            contractUpdate: '0x5f5e1000'
+            default: '0x186a0'
+            delete: '-0xf0'
+            eventLog: '0x64'
+            get: '0x0'
+            input: '0xc8'
+            replace: '0x50'
+            set: '0x140'
+          stepLimit:
+            invoke: '0x9502f900'
+            query: '0x2faf080'
+          stepPrice: '0x2e90edd00'
+        feeSharingEnabled: '0x1'
+        revision: '0xd'
+        roundLimitFactor: '0x9'
+        validatorList:
+          - hxcddf5733929ee06b98eef590157ac06db609ff23
+          - hx671e16197d321ca12e5a560f48aa1a1b925faf1b
+          - hx73dbec60e200a741d607b4e1233ca347a7d05df6
+          - hxe45ef7de9eef0200a4090e57d6b92f40377eaea1
+          - hx6f36c0b3c0a2ee1bd33a888f84b6dedc79f7052a
+          - hxe21a90699ce258a01b8b4b5b00984163bff7affc
+          - hx7d988272c3eb62500843fb64fc9feccbc604c55a
+          - hx4417d5d6a6aff9b7379a54332bcc0492c8f211e7
+          - hx3fb286b352c35d229113bb72fdd7b65da4826ad0
+          - hx1f7578266186c6e7b6b4be0ccd5d3a3829e98d93
+          - hx40abb59013b011c98d880314db92d762fab3ee15
+          - hx193548d3b36f41faddac75fc3491eb4701182927
+          - hxc513e4772b9e7a8cebf0479ef984bb2fed79738e
+          - hx10f6b0079c455d5b766e02e460996e1872f45f54
+          - hx4bae569c98bf2fe69ec71e2e9d1b5189fdd47cf9
+          - hx4d4acd34c79a6b3cee9be4a49989f0e37f6c5c31
+          - hx657997be01c2c722776aa86aeb1faab99b17367d
+          - hxb302f1147dab852e5b55b6b35ea79f810838f591
+          - hx65fce9c0040489cf28d221f92e61a8687cf2bf2d
+          - hx79e692813dfb510b8184dc132986974f20cbad37
+          - hxcd83400d8c2331b28ea6a41e28efcb90fea2308d
+          - hx24158e77bae2b3e90b9ae554e5da28f5629b0f8b
+      message: gochain generated genesis
+      nid: '0x2'
+    IISS: ""
+BerlinNet:
+  version: "v1.0.7"
+  only_goloop: false
+  info:
+    api_endpoint: "https://berlin.net.solidwallet.io"
+    p2p_endpoint: "seed-berlin.solidwallet.io:7100"
+    channel: "icon_dex"
+    tracker: "https://berlin.tracker.solidwallet.io/"
+    docker_tag: "iconloop/icon2-node:v1.3.0"
+      #docker_tag: "iconloop/goloop-icon:v1.2.14"
+    goloop_version: "https://github.com/icon-project/goloop/tree/v1.3.0"
+    transaction_fee: "on"
+    REVISION: "0xd"
+    SCORE_audit: "off"
+    UPDATE_DATE: "2022-11-04"
+    description: "-"
+  env:
+    CID: "0xee03d9"
+    NID: "0x7"
+    ENDPOINT: "https://berlin.net.solidwallet.io"
+    LOGFILE: "/goloop/logs/goloop.log"
+    LOGROTATE_DATE: 14
+    LOG_OUTPUT_TYPE: "file"
+    SEEDS: "seed-berlin.solidwallet.io:7100"
+    GENESIS:
+      accounts:
+        - address: "hx5a05b58a25a1e5ea0f1d5715e1f655dffc1fb30a"
+          balance: "0x2961fff8ca4a62327800000"
+          name: "god"
+        - address: "hx6e1dd0d4432620778b54b2bbc21ac3df961adf89"
+          balance: "0x52b7d2dcc80cd2e4000000"
+          name: "score_owner"
+        - address: "hx1000000000000000000000000000000000000000"
+          balance: "0x0"
+          name: "treasury"
+        - address: "cx0000000000000000000000000000000000000001"
+          name: "governance"
+          score:
+            contentId: "hash:{{ziphash:governance}}"
+            contentType: "application/zip"
+            owner: "hx6e1dd0d4432620778b54b2bbc21ac3df961adf89"
+        - address: "hx89e9d082f1444dd3bb3496c8509a541eb2949a5b"
+          balance: "0x14adf4b7320334b90000000"
+          name: "genesis address"
+      chain:
+        auditEnabled: "0x1"
+        revision: "0xd"
+        blockInterval: "0x7d0"
+        roundLimitFactor: "0x9"
+        fee:
+          stepCosts:
+            apiCall: "0x2710"
+            contractCall: "0x61a8"
+            contractCreate: "0x3b9aca00"
+            contractSet: "0x3a98"
+            contractUpdate: "0x3b9aca00"
+            default: "0x186a0"
+            delete: "-0xf0"
+            deleteBase: "0xc8"
+            get: "0x19"
+            getBase: "0xbb8"
+            input: "0xc8"
+            log: "0x64"
+            logBase: "0x1388"
+            schema: "0x1"
+            set: "0x140"
+            setBase: "0x2710"
+          stepLimit:
+            invoke: "0x9502f900"
+            query: "0x2faf080"
+          stepPrice: "0x2e90edd00"
+        revision: "0xd"
+        roundLimitFactor: "0x9"
+        validatorList:
+          - hxffb2996f2da27fa8e37053e7d54ab12076ebc242
+          - hx9e9e37746ff6a1e339bc898d803aa4da8aae1f69
+          - hx39d8201051146e191cb89c40ee8ef5695556496a
+          - hx6eba79486f98193537bae35ad521b8965a2c3548
+      message: "gochain generated genesis"
+      nid: "0x7"
+    IISS:
+      bondRequirement: 5
+      iissBlockHeight: 0
+      iissVersion: 2
+      irep: 1296000000
+      lockMaxMultiplier: 20
+      lockMinMultiplier: 5
+      mainPRepCount: 4
+      rewardFund:
+        Icps: 0
+        Iglobal: 15552000000
+        Iprep: 50
+        Irelay: 0
+        Ivoter: 50
+      rrep: 1296000000
+      subPRepCount: 100
+      termPeriod: 7200
+      unbondingPeriodMultiplier: 7
+      unstakeSlotMax: 1000
+SejongNet:
+  version: "v1.0.3"
+  only_goloop: false
+  info:
+    api_endpoint: "https://sejong.net.solidwallet.io"
+    p2p_endpoint: "seed-sejong.solidwallet.io:7100"
+    channel: "icon_dex"
+    tracker: "https://sejong.tracker.solidwallet.io/"
+    docker_tag: "iconloop/icon2-node:v1.3.0"
+    goloop_version: "https://github.com/icon-project/goloop/tree/v1.3.0"
+    transaction_fee: "on"
+    REVISION: "0x14"
+    SCORE_audit: "off"
+    UPDATE_DATE: "2022-11-11"
+    description: "-"
+  env:
+    CID: "0x9e1477"
+    NID: "0x53"
+    ENDPOINT: "https://sejong.net.solidwallet.io"
+    LOGFILE: "/goloop/logs/goloop.log"
+    LOGROTATE_DATE: 14
+    LOG_OUTPUT_TYPE: "file"
+    SEEDS: "seed-sejong.solidwallet.io:7100"
+    GENESIS:
+      accounts:
+        - address: "hx5a05b58a25a1e5ea0f1d5715e1f655dffc1fb30a"
+          balance: "0x2961fff8ca4a62327800000"
+          name: "god"
+        - address: "hx6e1dd0d4432620778b54b2bbc21ac3df961adf89"
+          balance: "0x52b7d2dcc80cd2e4000000"
+          name: "score_owner"
+        - address: "hx1000000000000000000000000000000000000000"
+          balance: "0x0"
+          name: "treasury"
+        - address: "cx0000000000000000000000000000000000000001"
+          name: "governance"
+          score:
+            contentId: "hash:{{ziphash:governance}}"
+            contentType: "application/zip"
+            owner: "hx6e1dd0d4432620778b54b2bbc21ac3df961adf89"
+        - address: "hxc293961bcf611eca8b99ec215d8f24169cf3936f"
+          balance: "0x14adf4b7320334b90000000"
+          name: "genesis address"
+      chain:
+        blockInterval: "0x7d0"
+        fee:
+          stepCosts:
+            apiCall: "0x2710"
+            contractCall: "0x61a8"
+            contractCreate: "0x3b9aca00"
+            contractDestruct: "-0x11170"
+            contractSet: "0x59d8"
+            contractUpdate: "0x3b9aca00"
+            default: "0x186a0"
+            delete: "-0xf0"
+            eventLog: "0x64"
+            get: "0x0"
+            input: "0xc8"
+            replace: "0x50"
+            set: "0x140"
+          stepLimit:
+            invoke: "0x9502f900"
+            query: "0x2faf080"
+          stepPrice: "0x2e90edd00"
+        revision: "0xf"
+        roundLimitFactor: "0x3"
+        validatorList:
+          - hx33f27fa4022200e9d91b2850553d8e5ff98602e1
+          - hxc4aec0393267a1833f7abd496b1da713761ac113
+          - hxd317634efef2c9a08638ce1702335020af82619a
+          - hxa7f147b6492f7c2e6b0005a2a8ffae040cd2a6ba
+          - hxf539cd3511254468c8944313ac6a74859e6c2bf1
+          - hxac717af1bace3c78ac59caaa9ea7e7c506e2582a
+          - hx7b2863ee11d2c7956572cdf19f44010545186538
+          - hxfb687d33ab37768678d59ff47710f35348a1a4ec
+          - hx002903b05ed4483a5b7cd7de10b575c7cad07939
+          - hx31b2d439cbc1e423e5ddc9ae2ab701f0913fea28
+          - hx77c99a70b8d1a4959744cb346e644d1d891ff41f
+          - hxbdbd35ad1659b8a533f978f24b8885901cf10e13
+          - hx808972f8c44a25f0bfdf5d8b11e7a6f77dee90f4
+          - hx99621fb19605dd4f6f97776f8c7243d1dc99a107
+          - hxb97c82a5577a0a436f51a41421ad2d3b28da3f25
+          - hxe14cd6170fbf093acad0771e6d20676e9f85bd95
+          - hx4ed035277c36277502b1b13625d9f4208d1a70a1
+          - hxa92e96fe491796a94b0070f778348a68345879fa
+          - hx25b7c0739242daa3e1a520d38311cf0a9d149710
+          - hx1b58e96b1197510750ff96ff97f88a674e6f8340
+          - hx6b34adf1cdbab2bf4a881275e0011f1bded82fe8
+          - hx08dd3122ea178246f39e05474f8f1d6ea02e6974
+      message: "Generated 20210915-014423134"
+      nid: "0x53"
+    IISS:
+      bondRequirement: 5
+      iissBlockHeight: 0
+      iissVersion: 2
+      irep: 1296000000
+      lockMaxMultiplier: 20
+      lockMinMultiplier: 5
+      mainPRepCount: 22
+      rewardFund:
+        Icps: 0
+        Iglobal: 15552000000
+        Iprep: 50
+        Irelay: 0
+        Ivoter: 50
+      rrep: 1296000000
+      subPRepCount: 100
+      termPeriod: 7200
+      unbondingPeriodMultiplier: 7
+      unstakeSlotMax: 1000
+WingNet:
+  version: "v1.0.0"
+  only_goloop: false
+  info:
+    api_endpoint: "http://20.20.6.78:9000"
+    p2p_endpoint: ""
+    channel: "icon_dex"
+    tracker: "http://20.20.6.82/"
+    docker_tag: "iconloop/goloop-icon:v1.0.10"
+    goloop_version: "https://github.com/icon-project/goloop/tree/v1.0.10"
+    transaction_fee: "on"
+    SCORE_audit: "off"
+    description: ""
+  env:
+    CID: "0x64c2c6"
+    NID: "0x2"
+    ENDPOINT: "http://20.20.6.78:9000"
+    LOGFILE: "/goloop/logs/goloop.log"
+    LOGROTATE_DATE: 14
+    LOG_OUTPUT_TYPE: "file"
+    SEEDS: "20.20.6.78:7100,20.20.6.77:7100,20.20.6.79:7100,20.20.6.80:7100"
+    GENESIS:
+      accounts:
+        - address: hx5a05b58a25a1e5ea0f1d5715e1f655dffc1fb30a
+          balance: '0x2961fff8ca4a62327800000'
+          name: god
+        - address: hx6e1dd0d4432620778b54b2bbc21ac3df961adf89
+          balance: '0x52b7d2dcc80cd2e4000000'
+          name: score_owner
+        - address: hx1000000000000000000000000000000000000000
+          balance: '0x0'
+          name: treasury
+        - address: cx0000000000000000000000000000000000000001
+          name: governance
+          score:
+            contentId: hash:{{ziphash:governance}}
+            contentType: application/zip
+            owner: hx6e1dd0d4432620778b54b2bbc21ac3df961adf89
+      chain:
+        auditEnabled: '0x0'
+        blockInterval: '0x7d0'
+        depositTerm: '0x13c680'
+        fee:
+          stepCosts:
+            apiCall: '0x2710'
+            contractCall: '0x61a8'
+            contractCreate: '0x3b9aca00'
+            contractDestruct: '-0x11170'
+            contractSet: '0x7530'
+            contractUpdate: '0x5f5e1000'
+            default: '0x186a0'
+            delete: '-0xf0'
+            eventLog: '0x64'
+            get: '0x0'
+            input: '0xc8'
+            replace: '0x50'
+            set: '0x140'
+          stepLimit:
+            invoke: '0x9502f900'
+            query: '0x2faf080'
+          stepPrice: '0x2e90edd00'
+        feeSharingEnabled: '0x1'
+        revision: '0xd'
+        roundLimitFactor: '0x9'
+        validatorList:
+          - hxac372dde8a54fcf3eb5386806a8199710babfdb6
+          - hx04aa52a2374c965808b086faa024e16ef806c77c
+          - hx349d8b698dd648569c7e6544bb5f4d3d564e93db
+          - hx91e5bf526db567d06d2ea111f4a409d6cfde0cc2
+      message: gochain generated genesis
+      nid: '0x2'
+    GENESIS_JSON: /goloop/config/genesis.json
+    GENESIS_STORAGE: /goloop/config/icon_genesis.zip
+    IISS:
+      bondRequirement: 5
+      iissBlockHeight: 0
+      iissVersion: 2
+      irep: 1296000000
+      lockMaxMultiplier: 20
+      lockMinMultiplier: 5
+      mainPRepCount: 4
+      rewardFund:
+        Icps: 0
+        Iglobal: 15552000000
+        Iprep: 50
+        Irelay: 0
+        Ivoter: 50
+      rrep: 1296000000
+      subPRepCount: 100
+      termPeriod: 90
+      unbondingPeriodMultiplier: 7
+      unstakeSlotMax: 1000
+    IISS_JSON: /goloop/icon_config.json

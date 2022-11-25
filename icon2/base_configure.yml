@@ -1,0 +1,248 @@
+version: "str"
+only_goloop: false
+required:
+  settings:
+    env: true
+settings:
+  env:
+    GENESIS: null
+    GENESIS_JSON: "/goloop/config/genesis.json"
+    GENESIS_STORAGE: "/goloop/config/icon_genesis.zip"
+    IISS: null
+    IISS_JSON: "/goloop/icon_config.json"
+reference:
+  env:
+    SERVICE:
+      type: "str"
+      default: ""
+    CID:
+      type: "str"
+      default: "0x1"
+    NID:
+      type: "str"
+      default: "0x1"
+    ROLE:
+      type: "int"
+      default: 0
+    BASE_DIR:
+      type: "str"
+      default: "/goloop"
+    CC_DEBUG:
+      type: "bool"
+      default: false
+    DOCKER_LOG_FILES:
+      type: "str"
+      default: "chain.log,health.log,error.log,debug.log"
+    DOCKER_LOG_STDOUT:
+      type: "bool"
+      default: false
+    CONFIG_LOCAL_FILE:
+      type: "str"
+      default: "/goloop/configure.yml"
+    CONFIG_URL:
+      type: "str"
+      default: "https://networkinfo.solidwallet.io/icon2"
+    CONFIG_URL_FILE:
+      type: "str"
+      default: "default_configure.yml"
+    DOWNLOAD_FORCE:
+      type: "bool"
+      default: true
+    DOWNLOAD_TOOL:
+      type: "str"
+      default: "aria2c"
+    DOWNLOAD_URL:
+      type: "str"
+      default: "https://networkinfo.solidwallet.io/info"
+    DOWNLOAD_URL_TYPE:
+      type: "str"
+      default: "indexing"
+    ENDPOINT:
+      type: "str"
+      default: "https://preps.net.solidwallet.io"
+    FASTEST_START:
+      type: "bool"
+      default: false
+    GENESIS:
+      type: "dict"
+      default:
+        accounts:
+          - address: "hx54f7853dc6481b670caf69c5a27c7c8fe5be8269"
+            balance: "0x2961fff8ca4a62327800000"
+            name: "god"
+          - address: "hx1000000000000000000000000000000000000000"
+            balance: "0x0"
+            name: "treasury"
+        message: "A rhizome has no beginning or end; it is always in the middle, between\
+                 \ things, interbeing, intermezzo. The tree is filiation, but the rhizome is\
+                 \ alliance, uniquely alliance. The tree imposes the verb \"to be\" but the fabric\
+                 \ of the rhizome is the conjunction, \"and ... and ...and...\"This conjunction\
+                 \ carries enough force to shake and uproot the verb \"to be.\" Where are you\
+                 \ going? Where are you coming from? What are you heading for? These are totally\
+                 \ useless questions.\n\n - Mille Plateaux, Gilles Deleuze & Felix Guattari\n\
+                 \n\"Hyperconnect the world\""
+    GENESIS_JSON:
+      type: "str"
+      default: "/goloop/config/genesis.json"
+    GENESIS_STORAGE:
+      type: "str"
+      default: "/goloop/config/icon_genesis.zip"
+    IISS:
+      type: "dict"
+      default: ""
+    IISS_JSON:
+      type: "str"
+      default: "/goloop/icon_config.json"
+    IS_AUTOGEN_CERT:
+      type: "bool"
+      default: false
+    IS_MIGRATION:
+      type: "bool"
+      default: false
+    KEY_RESET:
+      type: "bool"
+      default: false
+    KEY_PASSWORD:
+      type: "str"
+      default: "password123!@#"
+    KEY_STORE_FILENAME:
+      type: "str"
+      default: "keystore.json"
+    LOCAL_TEST:
+      type: "bool"
+      default: false
+    ONLY_GOLOOP:
+      type: "bool"
+      default: false
+    LOGDIR:
+      type: "str"
+      default: "/goloop/logs"
+    LOGFILE:
+      type: "str"
+      default: "/goloop/logs/goloop.log"
+    LOGROTATE_DATE:
+      type: "int"
+      default: 14
+    LOGROTATE_SIZE:
+      type: "str"
+      default: "1G"
+    LOG_OUTPUT_TYPE:
+      type: "str"
+      default: "file"
+    MAIN_TIME_OUT:
+      type: "int"
+      default: 30
+    MAIN_TIME_SLEEP:
+      type: "int"
+      default: 1
+    MAIN_RETRY_COUNT:
+      type: "int"
+      default: 200
+    MIGRATION_START:
+      type: "bool"
+      default: false
+    MIG_INFO_FILE:
+      type: "str"
+      default: "migration_configure.yml"
+    CHECK_BLOCK_STACK:
+      type: "int"
+      default: 10
+    CHECK_PEER_STACK:
+      type: "int"
+      default: 6
+    CHECK_STACK_LIMIT:
+      type: "int"
+      default: 360
+    CHECK_INTERVAL:
+      type: "int"
+      default: 10
+    CHECK_TIMEOUT:
+      type: "int"
+      default: 10
+    NTP_REFRESH_TIME:
+      type: "int"
+      default: 180
+    NTP_SERVER:
+      type: "str"
+      default: ""
+    NTP_SERVERS:
+      type: "str"
+      default: "time.google.com,time.cloudflare.com,time.facebook.com,time.apple.com,time.euro.apple.com"
+    USE_NTP_SYNC:
+      type: "bool"
+      default: true
+    USE_HEALTH_CHECK:
+      type: "bool"
+      default: true
+    RESTORE_PATH:
+      type: "str"
+      default: "restore"
+    RPC_INCLUDE_DEBUG:
+      type: "bool"
+      default: false
+    AUTO_SEEDS:
+      type: "bool"
+      default: false
+    SEEDS:
+      type: "str"
+      default: ""
+    SLACK_WH_URL:
+      type: "str"
+      default: ""
+    GOLOOP_CPUPROFILE:
+      type: "str"
+      default: "/goloop/data/cpu.profile"
+    GOLOOP_BACKUP_DIR:
+      type: "str"
+      default: "/goloop/data/backup"
+    GOLOOP_CONFIG:
+      type: "str"
+      default: "/goloop/config/server.json"
+    GOLOOP_CONSOLE_LEVEL:
+      type: "str"
+      default: "debug"
+    GOLOOP_EE_SOCKET:
+      type: "str"
+      default: "/goloop/data/ee.sock"
+    GOLOOP_ENGINES:
+      type: "str"
+      default: "python"
+    GOLOOP_KEY_SECRET:
+      type: "str"
+      default: "/goloop/config/keysecret"
+    GOLOOP_KEY_STORE:
+      type: "str"
+      default: "/goloop/config/keystore.json"
+    GOLOOP_LICENSE_FILE:
+      type: "str"
+      default: "/goloop/config/license.json"
+    GOLOOP_LOG_LEVEL:
+      type: "str"
+      default: "debug"
+    GOLOOP_LOG_WRITER_COMPRESS:
+      type: "bool"
+      default: false
+    GOLOOP_LOG_WRITER_FILENAME:
+      type: "str"
+      default: "/goloop/logs/goloop.log"
+    GOLOOP_NODE_DIR:
+      type: "str"
+      default: "/goloop/data"
+    GOLOOP_NODE_SOCK:
+      type: "str"
+      default: "/goloop/data/cli.sock"
+    GOLOOP_P2P:
+      type: "str"
+      default: "127.0.0.1:8080"
+    GOLOOP_P2P_LISTEN:
+      type: "str"
+      default: ":8080"
+    GOLOOP_RPC_ADDR:
+      type: "str"
+      default: ":9080"
+    GOLOOP_RPC_DUMP:
+      type: "bool"
+      default: false
+    GOLOOP_MEMPROFILE:
+      type: "str"
+      default: "/goloop/data/mem.profile"
