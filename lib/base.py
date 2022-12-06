@@ -50,6 +50,7 @@ def dividing_line(char="-", color="cyan"):
     except:
         cPrint(char * 30, color)
 
+
 def dump(obj:object, nested_level:int=0, output=sys.stdout):
     spacing = '   '
     def_spacing = '   '
