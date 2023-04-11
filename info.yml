@@ -29,19 +29,19 @@ network_list:
   - "BerlinNet"
   - "SejongNet"
 MainNet:
-  version: "v1.0.3"
+  version: "v1.3.4"
   only_goloop: false
   info:
     api_endpoint: "https://preps.net.solidwallet.io/"
     p2p_endpoint: "seed-ctz.solidwallet.io:7100"
     channel: "icon_dex"
     tracker: "https://tracker.icon.foundation/"
-    docker_tag: "iconloop/icon2-node:v1.2.14"
-    goloop_version: "https://github.com/icon-project/goloop/tree/v1.2.14"
+    docker_tag: "iconloop/icon2-node:v1.3.4"
+    goloop_version: "https://github.com/icon-project/goloop/tree/v1.3.4"
     transaction_fee: "on"
-    REVISION: "0x13"
+    REVISION: "0x14"
     SCORE_audit: "on"
-    UPDATE_DATE: "2022-10-26"
+    UPDATE_DATE: "2022-03-22"
     description: "-"
   env:
     CID: "0x1"
@@ -70,19 +70,19 @@ MainNet:
               \n\"Hyperconnect the world\""
     IISS: ""
 LisbonNet:
-  version: "v1.0.4"
+  version: "v1.3.5"
   only_goloop: false
   info:
     api_endpoint: "https://lisbon.net.solidwallet.io"
     p2p_endpoint: "seed-lisbon.solidwallet.io:7100"
     channel: "icon_dex"
     tracker: "https://lisbon.tracker.solidwallet.io/"
-    docker_tag: "iconloop/goloop-icon:v1.3.0"
-    goloop_version: "https://github.com/icon-project/goloop/tree/v1.3.0"
+    docker_tag: "iconloop/goloop-icon:v1.3.5"
+    goloop_version: "https://github.com/icon-project/goloop/tree/v1.3.5"
     transaction_fee: "on"
     REVISION: "0x14"
     SCORE_audit: "on"
-    UPDATE_DATE: "2022-11-11"
+    UPDATE_DATE: "2023-04-11"
     description: "---"
   env:
     CID: "0x23cdd9"
@@ -162,20 +162,20 @@ LisbonNet:
       nid: '0x2'
     IISS: ""
 BerlinNet:
-  version: "v1.0.8"
+  version: "v1.3.5"
   only_goloop: false
   info:
     api_endpoint: "https://berlin.net.solidwallet.io"
     p2p_endpoint: "seed-berlin.solidwallet.io:7100"
     channel: "icon_dex"
     tracker: "https://berlin.tracker.solidwallet.io/"
-    docker_tag: "iconloop/icon2-node:v1.3.0"
+    docker_tag: "iconloop/icon2-node:v1.3.5"
       #docker_tag: "iconloop/goloop-icon:v1.2.14"
-    goloop_version: "https://github.com/icon-project/goloop/tree/v1.3.0"
+    goloop_version: "https://github.com/icon-project/goloop/tree/v1.3.5"
     transaction_fee: "on"
     REVISION: "0xd"
     SCORE_audit: "off"
-    UPDATE_DATE: "2022-11-04"
+    UPDATE_DATE: "2023-04-11"
     description: "-"
   env:
     CID: "0xee03d9"
@@ -261,19 +261,19 @@ BerlinNet:
       unbondingPeriodMultiplier: 7
       unstakeSlotMax: 1000
 SejongNet:
-  version: "v1.0.5"
+  version: "v1.3.5"
   only_goloop: false
   info:
     api_endpoint: "https://sejong.net.solidwallet.io"
     p2p_endpoint: "seed-sejong.solidwallet.io:7100"
     channel: "icon_dex"
     tracker: "https://sejong.tracker.solidwallet.io/"
-    docker_tag: "iconloop/icon2-node:v1.3.0"
-    goloop_version: "https://github.com/icon-project/goloop/tree/v1.3.0"
+    docker_tag: "iconloop/icon2-node:v1.3.5"
+    goloop_version: "https://github.com/icon-project/goloop/tree/v1.3.5"
     transaction_fee: "on"
     REVISION: "0x14"
     SCORE_audit: "off"
-    UPDATE_DATE: "2022-11-11"
+    UPDATE_DATE: "2023-04-11"
     description: "-"
   env:
     CID: "0x9e1477"
