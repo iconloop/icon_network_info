@@ -1,6 +1,6 @@
 ## ICON2 Netwrok info
 ```Describes information about the ICON2 network.```
-#### README Update : 2023-04-11 06:23:07(UTC) | 2023-04-11 15:23:07(Seoul)
+#### README Update : 2023-04-18 01:21:20(UTC) | 2023-04-18 10:21:20(Seoul)
 ### MainNet
 #### [MainNet configuration](https://networkinfo.solidwallet.io/node_info/MainNet/default_configure.yml)
 |key|value|
@@ -11,13 +11,13 @@
 |api_endpoint|https://preps.net.solidwallet.io/|
 |p2p_endpoint|seed-ctz.solidwallet.io:7100|
 |channel|icon_dex|
-|tracker|https://tracker.icon.foundation/|
-|docker_tag|iconloop/icon2-node:v1.3.4|
-|goloop_version|https://github.com/icon-project/goloop/tree/v1.3.4|
+|tracker|https://tracker.icon.community/|
+|docker_tag|iconloop/icon2-node:v1.3.5|
+|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.5|
 |transaction_fee|on|
 |REVISION|0x14|
 |SCORE_audit|on|
-|UPDATE_DATE|2022-03-22|
+|UPDATE_DATE|2022-04-18|
 |description|-|
 ### LisbonNet
 #### [LisbonNet configuration](https://networkinfo.solidwallet.io/node_info/LisbonNet/default_configure.yml)
@@ -31,7 +31,7 @@
 |channel|icon_dex|
 |tracker|https://lisbon.tracker.solidwallet.io/|
 |docker_tag|iconloop/goloop-icon:v1.3.5|
-|goloop_version|https://github.com/icon-project/goloop/tree/v1.3.5|
+|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.5|
 |transaction_fee|on|
 |REVISION|0x14|
 |SCORE_audit|on|
@@ -49,7 +49,7 @@
 |channel|icon_dex|
 |tracker|https://berlin.tracker.solidwallet.io/|
 |docker_tag|iconloop/icon2-node:v1.3.5|
-|goloop_version|https://github.com/icon-project/goloop/tree/v1.3.5|
+|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.5|
 |transaction_fee|on|
 |REVISION|0xd|
 |SCORE_audit|off|
@@ -67,7 +67,7 @@
 |channel|icon_dex|
 |tracker|https://sejong.tracker.solidwallet.io/|
 |docker_tag|iconloop/icon2-node:v1.3.5|
-|goloop_version|https://github.com/icon-project/goloop/tree/v1.3.5|
+|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.5|
 |transaction_fee|on|
 |REVISION|0x14|
 |SCORE_audit|off|

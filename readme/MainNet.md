@@ -7,12 +7,12 @@
 |api_endpoint|https://preps.net.solidwallet.io/|
 |p2p_endpoint|seed-ctz.solidwallet.io:7100|
 |channel|icon_dex|
-|tracker|https://tracker.icon.foundation/|
-|docker_tag|iconloop/icon2-node:v1.3.4|
-|goloop_version|https://github.com/icon-project/goloop/tree/v1.3.4|
+|tracker|https://tracker.icon.community/|
+|docker_tag|iconloop/icon2-node:v1.3.5|
+|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.5|
 |transaction_fee|on|
 |REVISION|0x14|
 |SCORE_audit|on|
-|UPDATE_DATE|2022-03-22|
+|UPDATE_DATE|2022-04-18|
 |description|-|
 ---

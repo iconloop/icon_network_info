@@ -9,7 +9,7 @@
 |channel|icon_dex|
 |tracker|https://sejong.tracker.solidwallet.io/|
 |docker_tag|iconloop/icon2-node:v1.3.5|
-|goloop_version|https://github.com/icon-project/goloop/tree/v1.3.5|
+|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.5|
 |transaction_fee|on|
 |REVISION|0x14|
 |SCORE_audit|off|
