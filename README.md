@@ -1,6 +1,6 @@
 ## ICON2 Netwrok info
 ```Describes information about the ICON2 network.```
-#### README Update : 2023-04-18 01:21:20(UTC) | 2023-04-18 10:21:20(Seoul)
+#### README Update : 2023-04-18 01:29:29(UTC) | 2023-04-18 10:29:29(Seoul)
 ### MainNet
 #### [MainNet configuration](https://networkinfo.solidwallet.io/node_info/MainNet/default_configure.yml)
 |key|value|
@@ -51,7 +51,7 @@
 |docker_tag|iconloop/icon2-node:v1.3.5|
 |goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.5|
 |transaction_fee|on|
-|REVISION|0xd|
+|REVISION|0x15|
 |SCORE_audit|off|
 |UPDATE_DATE|2023-04-11|
 |description|-|
