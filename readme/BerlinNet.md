@@ -13,6 +13,6 @@
 |transaction_fee|on|
 |REVISION|0x15|
 |SCORE_audit|off|
-|UPDATE_DATE|2023-05-16|
+|UPDATE_DATE|2023-05-31|
 |description|-|
 ---
