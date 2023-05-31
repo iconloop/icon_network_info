@@ -1,6 +1,6 @@
 ## ICON2 Netwrok info
 ```Describes information about the ICON2 network.```
-#### README Update : 2023-05-31 02:13:04(UTC) | 2023-05-31 11:13:04(Seoul)
+#### README Update : 2023-05-31 06:14:23(UTC) | 2023-05-31 15:14:23(Seoul)
 ### MainNet
 #### [MainNet configuration](https://networkinfo.solidwallet.io/node_info/MainNet/default_configure.yml)
 |key|value|
@@ -30,8 +30,8 @@
 |p2p_endpoint|seed-lisbon.solidwallet.io:7100|
 |channel|icon_dex|
 |tracker|https://lisbon.tracker.solidwallet.io/|
-|docker_tag|iconloop/goloop-icon:v1.3.6|
-|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.6|
+|docker_tag|iconloop/goloop-icon:v1.3.7|
+|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.7|
 |transaction_fee|on|
 |REVISION|0x14|
 |SCORE_audit|on|
@@ -48,8 +48,8 @@
 |p2p_endpoint|seed-berlin.solidwallet.io:7100|
 |channel|icon_dex|
 |tracker|https://berlin.tracker.solidwallet.io/|
-|docker_tag|iconloop/icon2-node:v1.3.6|
-|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.6|
+|docker_tag|iconloop/icon2-node:v1.3.7|
+|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.7|
 |transaction_fee|on|
 |REVISION|0x15|
 |SCORE_audit|off|
@@ -66,8 +66,8 @@
 |p2p_endpoint|seed-sejong.solidwallet.io:7100|
 |channel|icon_dex|
 |tracker|https://sejong.tracker.solidwallet.io/|
-|docker_tag|iconloop/icon2-node:v1.3.6|
-|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.6|
+|docker_tag|iconloop/icon2-node:v1.3.7|
+|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.7|
 |transaction_fee|on|
 |REVISION|0x14|
 |SCORE_audit|off|
