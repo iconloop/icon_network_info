@@ -1,6 +1,6 @@
 ## ICON2 Netwrok info
 ```Describes information about the ICON2 network.```
-#### README Update : 2023-05-31 06:20:57(UTC) | 2023-05-31 15:20:57(Seoul)
+#### README Update : 2023-06-07 01:50:20(UTC) | 2023-06-07 10:50:20(Seoul)
 ### MainNet
 #### [MainNet configuration](https://networkinfo.solidwallet.io/node_info/MainNet/default_configure.yml)
 |key|value|
@@ -12,12 +12,12 @@
 |p2p_endpoint|seed-ctz.solidwallet.io:7100|
 |channel|icon_dex|
 |tracker|https://tracker.icon.community/|
-|docker_tag|iconloop/icon2-node:v1.3.5|
-|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.5|
+|docker_tag|iconloop/icon2-node:v1.3.7|
+|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.7|
 |transaction_fee|on|
 |REVISION|0x14|
 |SCORE_audit|on|
-|UPDATE_DATE|2022-04-18|
+|UPDATE_DATE|2023-06-07|
 |description|-|
 ### LisbonNet
 #### [LisbonNet configuration](https://networkinfo.solidwallet.io/node_info/LisbonNet/default_configure.yml)
