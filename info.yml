@@ -20,27 +20,24 @@ restore:
   BerlinNet:
     index_url: "https://icon2-backup-jp.s3.ap-northeast-1.amazonaws.com/jp/bk/s3sync/BerlinNet/20221121/file_list.txt?version=1121"
     checksum_url: "https://icon2-backup-jp.s3.ap-northeast-1.amazonaws.com/jp/bk/s3sync/BerlinNet/20221121/checksum.json?version=1121"
-  SejongNet:
-    index_url: "https://icon2-backup-jp.s3.ap-northeast-1.amazonaws.com/jp/bk/s3sync/SejongNet/20221121/file_list.txt?version=1121"
-    checksum_url: "https://icon2-backup-jp.s3.ap-northeast-1.amazonaws.com/jp/bk/s3sync/SejongNet/20221121/checksum.json?version=1121"
 network_list:
   - "MainNet"
   - "LisbonNet"
   - "BerlinNet"
 MainNet:
-  version: "v1.3.8"
+  version: "v1.3.9"
   only_goloop: false
   info:
     api_endpoint: "https://preps.net.solidwallet.io/"
     p2p_endpoint: "seed-ctz.solidwallet.io:7100"
     channel: "icon_dex"
     tracker: "https://tracker.icon.community/"
-    docker_tag: "iconloop/icon2-node:v1.3.8"
-    goloop_version: "https://github.com/icon-project/goloop/releases/tag/v1.3.8"
+    docker_tag: "iconloop/icon2-node:v1.3.9"
+    goloop_version: "https://github.com/icon-project/goloop/releases/tag/v1.3.9"
     transaction_fee: "on"
     REVISION: "0x15"
     SCORE_audit: "on"
-    UPDATE_DATE: "2023-07-05"
+    UPDATE_DATE: "2023-08-16"
     description: "-"
   env:
     CID: "0x1"
