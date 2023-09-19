@@ -321,4 +321,4 @@ settings:
     message: gochain generated genesis
     nid: '0x2'
   iiss: ''
-version: v1.3.9
+version: v1.3.10

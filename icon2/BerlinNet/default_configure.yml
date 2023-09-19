@@ -325,4 +325,4 @@ settings:
     termPeriod: 7200
     unbondingPeriodMultiplier: 7
     unstakeSlotMax: 1000
-version: v1.3.9
+version: v1.3.10
