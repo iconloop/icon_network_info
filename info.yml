@@ -20,6 +20,9 @@ restore:
   BerlinNet:
     index_url: "https://icon2-backup-jp.s3.ap-northeast-1.amazonaws.com/jp/bk/s3sync/BerlinNet/20221121/file_list.txt?version=1121"
     checksum_url: "https://icon2-backup-jp.s3.ap-northeast-1.amazonaws.com/jp/bk/s3sync/BerlinNet/20221121/checksum.json?version=1121"
+  TechTeamNet:
+    index_url: ""
+    checksum_url: ""
 network_list:
   - "MainNet"
   - "LisbonNet"
@@ -365,6 +368,84 @@ SejongNet:
       termPeriod: 7200
       unbondingPeriodMultiplier: 7
       unstakeSlotMax: 1000
+TechTeamNet:
+  version: "v1.3.12"
+  only_goloop: false
+  info:
+    api_endpoint: "https://techteam.net.solidwallet.io"
+    p2p_endpoint: "seed-techteam.solidwallet.io:7100"
+    channel: "icon_dex"
+    tracker: "https://techteam.tracker.solidwallet.io/"
+    docker_tag: "iconloop/goloop-icon:v1.3.12"
+    goloop_version: "https://github.com/icon-project/goloop/releases/tag/v1.3.12"
+    transaction_fee: "on"
+    REVISION: "0x15"
+    SCORE_audit: "on"
+    UPDATE_DATE: "2023-10-30"
+    description: "-"
+  env:
+    CID: "0x9635a"
+    NID: "0xa"
+    ENDPOINT: "https://techteam.net.solidwallet.io"
+    LOGFILE: "/goloop/logs/goloop.log"
+    LOGROTATE_DATE: 14
+    LOG_OUTPUT_TYPE: "file"
+    SEEDS: "seed-techteam.solidwallet.io:7100"
+    GENESIS:
+      accounts:
+        - address: hx5a05b58a25a1e5ea0f1d5715e1f655dffc1fb30a
+          balance: '0x2961fff8ca4a62327800000'
+          name: god
+        - balance: '0x52b7d2dcc80cd2e4000000'
+          name: score_owner
+          address: hx6e1dd0d4432620778b54b2bbc21ac3df961adf89
+        - address: hx1000000000000000000000000000000000000000
+          balance: '0x0'
+          name: treasury
+        - address: cx0000000000000000000000000000000000000001
+          name: governance
+          score:
+            contentId: hash:{{ziphash:governance}}
+            contentType: application/zip
+            owner: hx6e1dd0d4432620778b54b2bbc21ac3df961adf89
+        - balance: '0x14adf4b7320334b90000000'
+          name: genesis address
+          address: hx73dd8605141de4799b6f28f74689f5758bb9e5aa
+      chain:
+        auditEnabled: '0x1'
+        revision: '0xd'
+        blockInterval: '0x7d0'
+        roundLimitFactor: '0x9'
+        validatorList:
+          - hx8193e91e4e6c0a8bd6de37016edaebdef5b80614
+          - hx36bd21fe49c2ac4c8691318cbd49747d582f5691
+          - hx3d79aae7985a436b85b785c572d0da09aed49bdd
+          - hxf09c3f019fe7c52cce953f426e817678991dc990
+        fee:
+          stepPrice: '0x2e90edd00'
+          stepLimit:
+            invoke: '0x9502f900'
+            query: '0x2faf080'
+          stepCosts:
+            apiCall: '0x2710'
+            contractCall: '0x61a8'
+            contractCreate: '0x3b9aca00'
+            contractSet: '0x3a98'
+            contractUpdate: '0x3b9aca00'
+            default: '0x186a0'
+            delete: "-0xf0"
+            deleteBase: '0xc8'
+            get: '0x19'
+            getBase: '0xbb8'
+            input: '0xc8'
+            log: '0x64'
+            logBase: '0x1388'
+            schema: '0x1'
+            set: '0x140'
+            setBase: '0x2710'
+      message: gochain generated genesis
+      nid: '0xa'
+    IISS: ""
 WingNet:
   version: "v1.0.1"
   only_goloop: false
