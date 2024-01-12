@@ -8,11 +8,11 @@
 |p2p_endpoint|seed-lisbon.solidwallet.io:7100|
 |channel|icon_dex|
 |tracker|https://lisbon.tracker.solidwallet.io/|
-|docker_tag|iconloop/goloop-icon:v1.3.13|
-|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.3.13|
+|docker_tag|iconloop/goloop-icon:v1.4.13|
+|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.4.0|
 |transaction_fee|on|
-|REVISION|0x16|
+|REVISION|0x19|
 |SCORE_audit|on|
-|UPDATE_DATE|2023-11-23|
+|UPDATE_DATE|2024-01-12|
 |description|-|
 ---
