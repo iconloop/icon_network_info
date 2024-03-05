@@ -537,3 +537,85 @@ WingNet:
       unbondingPeriodMultiplier: 7
       unstakeSlotMax: 1000
     IISS_JSON: /goloop/icon_config.json
+VigoNet:
+  version: "v1.4.0"
+  only_goloop: false
+  info:
+    api_endpoint: "https://vigo.net.solidwallet.io"
+    p2p_endpoint: "vigo.net.solidwallet.io:7100"
+    channel: "icon_dex"
+    tracker: "https://vigo.tracker.solidwallet.io/"
+    docker_tag: "iconloop/goloop-icon:v1.4.0"
+    goloop_version: "https://github.com/icon-project/goloop/releases/tag/v1.4.0"
+    transaction_fee: "on"
+    REVISION: "0x17"
+    SCORE_audit: "on"
+    UPDATE_DATE: "2024-03-05"
+    description: "-"
+  env:
+    CID: "0x6bc7f8"
+    NID: "0x111"
+    ENDPOINT: "https://vigo.net.solidwallet.io"
+    LOGFILE: "/goloop/logs/goloop.log"
+    LOGROTATE_DATE: 14
+    LOG_OUTPUT_TYPE: "file"
+    SEEDS: "vigo.net.solidwallet.io:7100"
+    GENESIS:
+      accounts:
+        - address: hx5a05b58a25a1e5ea0f1d5715e1f655dffc1fb30a
+          balance: '0x2961fff8ca4a62327800000'
+          name: god
+        - balance: '0x52b7d2dcc80cd2e4000000'
+          name: score_owner
+          address: hx6e1dd0d4432620778b54b2bbc21ac3df961adf89
+        - address: hx1000000000000000000000000000000000000000
+          balance: '0x0'
+          name: treasury
+        - address: cx0000000000000000000000000000000000000001
+          name: governance
+          score:
+            contentId: hash:{{ziphash:governance}}
+            contentType: application/zip
+            owner: hx6e1dd0d4432620778b54b2bbc21ac3df961adf89
+        - balance: '0x14adf4b7320334b90000000'
+          name: genesis address
+          address: hx73dd8605141de4799b6f28f74689f5758bb9e5aa
+      chain:
+        auditEnabled: '0x1'
+        revision: '0xd'
+        blockInterval: '0x7d0'
+        roundLimitFactor: '0x9'
+        validatorList:
+          - hx8ad2003fbc96abc39b99e5e66eef5ed23e3a4d14
+          - hxbfb7388302572e3574e88a794d198a6c0cb8bf87
+          - hxbec0d108a62861b417103a0ec13e931592cce23f
+          - hx15eac99c2e86026bd32f88558fb43071f24017ca
+          - hxaa3400a9d044174e0c43537fd46e69e069f996bb
+          - hxe5fea1d09efaf395df0e267299eb863e8295c174
+          - hx00c443ece58761e91cdc469530e61c4c4e8c6c0c
+        fee:
+          stepPrice: '0x2e90edd00'
+          stepLimit:
+            invoke: '0x9502f900'
+            query: '0x2faf080'
+          stepCosts:
+            apiCall: '0x2710'
+            contractCall: '0x61a8'
+            contractCreate: '0x3b9aca00'
+            contractSet: '0x3a98'
+            contractUpdate: '0x3b9aca00'
+            default: '0x186a0'
+            delete: "-0xf0"
+            deleteBase: '0xc8'
+            get: '0x19'
+            getBase: '0xbb8'
+            input: '0xc8'
+            log: '0x64'
+            logBase: '0x1388'
+            schema: '0x1'
+            set: '0x140'
+            setBase: '0x2710'
+      message: gochain generated genesis
+      nid: '0x111'
+    IISS: ""
+
