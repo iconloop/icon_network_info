@@ -559,7 +559,7 @@ VigoNet:
     LOGFILE: "/goloop/logs/goloop.log"
     LOGROTATE_DATE: 14
     LOG_OUTPUT_TYPE: "file"
-    SEEDS: "vigo.net.solidwallet.io:7100"
+    SEEDS: "20.30.4.110:7100"
     GENESIS:
       accounts:
         - address: hx5a05b58a25a1e5ea0f1d5715e1f655dffc1fb30a

@@ -1,0 +1,324 @@
+only_goloop: false
+reference:
+  env:
+    AUTO_SEEDS:
+      default: false
+      type: bool
+    BASE_DIR:
+      default: /goloop
+      type: str
+    CC_DEBUG:
+      default: false
+      type: bool
+    CHECK_BLOCK_STACK:
+      default: 10
+      type: int
+    CHECK_INTERVAL:
+      default: 10
+      type: int
+    CHECK_PEER_STACK:
+      default: 6
+      type: int
+    CHECK_STACK_LIMIT:
+      default: 360
+      type: int
+    CHECK_TIMEOUT:
+      default: 10
+      type: int
+    CID:
+      default: '0x1'
+      type: str
+    CONFIG_LOCAL_FILE:
+      default: /goloop/configure.yml
+      type: str
+    CONFIG_URL:
+      default: https://networkinfo.solidwallet.io/icon2
+      type: str
+    CONFIG_URL_FILE:
+      default: default_configure.yml
+      type: str
+    DOCKER_LOG_FILES:
+      default: chain.log,health.log,error.log,debug.log
+      type: str
+    DOCKER_LOG_STDOUT:
+      default: false
+      type: bool
+    DOWNLOAD_FORCE:
+      default: true
+      type: bool
+    DOWNLOAD_TOOL:
+      default: aria2c
+      type: str
+    DOWNLOAD_URL:
+      default: https://networkinfo.solidwallet.io/info
+      type: str
+    DOWNLOAD_URL_TYPE:
+      default: indexing
+      type: str
+    ENDPOINT:
+      default: https://preps.net.solidwallet.io
+      type: str
+    FASTEST_START:
+      default: false
+      type: bool
+    GENESIS:
+      default:
+        accounts:
+        - address: hx54f7853dc6481b670caf69c5a27c7c8fe5be8269
+          balance: '0x2961fff8ca4a62327800000'
+          name: god
+        - address: hx1000000000000000000000000000000000000000
+          balance: '0x0'
+          name: treasury
+        message: "A rhizome has no beginning or end; it is always in the middle, between\
+          \ things, interbeing, intermezzo. The tree is filiation, but the rhizome\
+          \ is alliance, uniquely alliance. The tree imposes the verb \"to be\" but\
+          \ the fabric of the rhizome is the conjunction, \"and ... and ...and...\"\
+          This conjunction carries enough force to shake and uproot the verb \"to\
+          \ be.\" Where are you going? Where are you coming from? What are you heading\
+          \ for? These are totally useless questions.\n\n - Mille Plateaux, Gilles\
+          \ Deleuze & Felix Guattari\n\n\"Hyperconnect the world\""
+      type: dict
+    GENESIS_JSON:
+      default: /goloop/config/genesis.json
+      type: str
+    GENESIS_STORAGE:
+      default: /goloop/config/icon_genesis.zip
+      type: str
+    GOLOOP_BACKUP_DIR:
+      default: /goloop/data/backup
+      type: str
+    GOLOOP_CONFIG:
+      default: /goloop/config/server.json
+      type: str
+    GOLOOP_CONSOLE_LEVEL:
+      default: debug
+      type: str
+    GOLOOP_CPUPROFILE:
+      default: /goloop/data/cpu.profile
+      type: str
+    GOLOOP_EE_SOCKET:
+      default: /goloop/data/ee.sock
+      type: str
+    GOLOOP_ENGINES:
+      default: python
+      type: str
+    GOLOOP_KEY_SECRET:
+      default: /goloop/config/keysecret
+      type: str
+    GOLOOP_KEY_STORE:
+      default: /goloop/config/keystore.json
+      type: str
+    GOLOOP_LICENSE_FILE:
+      default: /goloop/config/license.json
+      type: str
+    GOLOOP_LOG_LEVEL:
+      default: debug
+      type: str
+    GOLOOP_LOG_WRITER_COMPRESS:
+      default: false
+      type: bool
+    GOLOOP_LOG_WRITER_FILENAME:
+      default: /goloop/logs/goloop.log
+      type: str
+    GOLOOP_MEMPROFILE:
+      default: /goloop/data/mem.profile
+      type: str
+    GOLOOP_NODE_DIR:
+      default: /goloop/data
+      type: str
+    GOLOOP_NODE_SOCK:
+      default: /goloop/data/cli.sock
+      type: str
+    GOLOOP_P2P:
+      default: 127.0.0.1:8080
+      type: str
+    GOLOOP_P2P_LISTEN:
+      default: :8080
+      type: str
+    GOLOOP_RPC_ADDR:
+      default: :9080
+      type: str
+    GOLOOP_RPC_DUMP:
+      default: false
+      type: bool
+    IISS:
+      default: ''
+      type: dict
+    IISS_JSON:
+      default: /goloop/icon_config.json
+      type: str
+    IS_AUTOGEN_CERT:
+      default: false
+      type: bool
+    IS_MIGRATION:
+      default: false
+      type: bool
+    KEY_PASSWORD:
+      default: password123!@#
+      type: str
+    KEY_RESET:
+      default: false
+      type: bool
+    KEY_STORE_FILENAME:
+      default: keystore.json
+      type: str
+    LOCAL_TEST:
+      default: false
+      type: bool
+    LOGDIR:
+      default: /goloop/logs
+      type: str
+    LOGFILE:
+      default: /goloop/logs/goloop.log
+      type: str
+    LOGROTATE_DATE:
+      default: 14
+      type: int
+    LOGROTATE_SIZE:
+      default: 1G
+      type: str
+    LOG_OUTPUT_TYPE:
+      default: file
+      type: str
+    MAIN_RETRY_COUNT:
+      default: 200
+      type: int
+    MAIN_TIME_OUT:
+      default: 30
+      type: int
+    MAIN_TIME_SLEEP:
+      default: 1
+      type: int
+    MIGRATION_START:
+      default: false
+      type: bool
+    MIG_INFO_FILE:
+      default: migration_configure.yml
+      type: str
+    NID:
+      default: '0x1'
+      type: str
+    NTP_REFRESH_TIME:
+      default: 180
+      type: int
+    NTP_SERVER:
+      default: ''
+      type: str
+    NTP_SERVERS:
+      default: time.google.com,time.cloudflare.com,time.facebook.com,time.apple.com,time.euro.apple.com
+      type: str
+    ONLY_GOLOOP:
+      default: false
+      type: bool
+    RESTORE_PATH:
+      default: restore
+      type: str
+    ROLE:
+      default: 0
+      type: int
+    RPC_INCLUDE_DEBUG:
+      default: false
+      type: bool
+    SEEDS:
+      default: ''
+      type: str
+    SERVICE:
+      default: ''
+      type: str
+    SLACK_WH_URL:
+      default: ''
+      type: str
+    USE_HEALTH_CHECK:
+      default: true
+      type: bool
+    USE_NTP_SYNC:
+      default: true
+      type: bool
+required:
+  settings:
+    env: true
+settings:
+  env:
+    CID: '0x23cdd9'
+    ENDPOINT: https://lisbon.net.solidwallet.io
+    GENESIS: null
+    GENESIS_JSON: /goloop/config/genesis.json
+    GENESIS_STORAGE: /goloop/config/icon_genesis.zip
+    IISS: null
+    IISS_JSON: /goloop/icon_config.json
+    LOGFILE: /goloop/logs/goloop.log
+    LOGROTATE_DATE: 14
+    LOG_OUTPUT_TYPE: file
+    NID: '0x2'
+    SEEDS: seed-lisbon.solidwallet.io:7100
+  genesis:
+    accounts:
+    - address: hx5a05b58a25a1e5ea0f1d5715e1f655dffc1fb30a
+      balance: '0x2961fff8ca4a62327800000'
+      name: god
+    - address: hx6e1dd0d4432620778b54b2bbc21ac3df961adf89
+      balance: '0x52b7d2dcc80cd2e4000000'
+      name: score_owner
+    - address: hx1000000000000000000000000000000000000000
+      balance: '0x0'
+      name: treasury
+    - address: cx0000000000000000000000000000000000000001
+      name: governance
+      score:
+        contentId: hash:{{ziphash:governance}}
+        contentType: application/zip
+        owner: hx6e1dd0d4432620778b54b2bbc21ac3df961adf89
+    chain:
+      auditEnabled: '0x1'
+      blockInterval: '0x7d0'
+      depositTerm: '0x13c680'
+      fee:
+        stepCosts:
+          apiCall: '0x2710'
+          contractCall: '0x61a8'
+          contractCreate: '0x3b9aca00'
+          contractDestruct: '-0x11170'
+          contractSet: '0x7530'
+          contractUpdate: '0x5f5e1000'
+          default: '0x186a0'
+          delete: '-0xf0'
+          eventLog: '0x64'
+          get: '0x0'
+          input: '0xc8'
+          replace: '0x50'
+          set: '0x140'
+        stepLimit:
+          invoke: '0x9502f900'
+          query: '0x2faf080'
+        stepPrice: '0x2e90edd00'
+      feeSharingEnabled: '0x1'
+      revision: '0xd'
+      roundLimitFactor: '0x9'
+      validatorList:
+      - hxcddf5733929ee06b98eef590157ac06db609ff23
+      - hx671e16197d321ca12e5a560f48aa1a1b925faf1b
+      - hx73dbec60e200a741d607b4e1233ca347a7d05df6
+      - hxe45ef7de9eef0200a4090e57d6b92f40377eaea1
+      - hx6f36c0b3c0a2ee1bd33a888f84b6dedc79f7052a
+      - hxe21a90699ce258a01b8b4b5b00984163bff7affc
+      - hx7d988272c3eb62500843fb64fc9feccbc604c55a
+      - hx4417d5d6a6aff9b7379a54332bcc0492c8f211e7
+      - hx3fb286b352c35d229113bb72fdd7b65da4826ad0
+      - hx1f7578266186c6e7b6b4be0ccd5d3a3829e98d93
+      - hx40abb59013b011c98d880314db92d762fab3ee15
+      - hx193548d3b36f41faddac75fc3491eb4701182927
+      - hxc513e4772b9e7a8cebf0479ef984bb2fed79738e
+      - hx10f6b0079c455d5b766e02e460996e1872f45f54
+      - hx4bae569c98bf2fe69ec71e2e9d1b5189fdd47cf9
+      - hx4d4acd34c79a6b3cee9be4a49989f0e37f6c5c31
+      - hx657997be01c2c722776aa86aeb1faab99b17367d
+      - hxb302f1147dab852e5b55b6b35ea79f810838f591
+      - hx65fce9c0040489cf28d221f92e61a8687cf2bf2d
+      - hx79e692813dfb510b8184dc132986974f20cbad37
+      - hxcd83400d8c2331b28ea6a41e28efcb90fea2308d
+      - hx24158e77bae2b3e90b9ae554e5da28f5629b0f8b
+    message: gochain generated genesis
+    nid: '0x2'
+  iiss: ''
+version: v1.4.0
