@@ -27,6 +27,7 @@ network_list:
   - "MainNet"
   - "LisbonNet"
   - "BerlinNet"
+  - "VigoNet"
 MainNet:
   version: "v1.4.0"
   only_goloop: false
@@ -550,16 +551,16 @@ VigoNet:
     transaction_fee: "on"
     REVISION: "0x17"
     SCORE_audit: "on"
-    UPDATE_DATE: "2024-03-21"
+    UPDATE_DATE: "2024-04-04"
     description: "-"
   env:
-    CID: "0x6bc7f8"
-    NID: "0x111"
+    CID: "0xd3dcd9"
+    NID: "0x112"
     ENDPOINT: "https://vigo.net.solidwallet.io"
     LOGFILE: "/goloop/logs/goloop.log"
     LOGROTATE_DATE: 14
     LOG_OUTPUT_TYPE: "file"
-    SEEDS: "20.30.4.110:7100"
+    SEEDS: "vigo.net.solidwallet.io:8100,vigo.net.solidwallet.io:8200,vigo.net.solidwallet.io:8300,vigo.net.solidwallet.io:8400,vigo.net.solidwallet.io:8500,vigo.net.solidwallet.io:8600,vigo.net.solidwallet.io:8700"
     GENESIS:
       accounts:
         - address: hx5a05b58a25a1e5ea0f1d5715e1f655dffc1fb30a
@@ -616,6 +617,6 @@ VigoNet:
             set: '0x140'
             setBase: '0x2710'
       message: gochain generated genesis
-      nid: '0x111'
+      nid: '0x112'
     IISS: ""
 
