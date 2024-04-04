@@ -1,6 +1,6 @@
 ## ICON2 Netwrok info
 ```Describes information about the ICON2 network.```
-#### README Update : 2024-03-21 08:28:41(UTC) | 2024-03-21 17:28:41(Seoul)
+#### README Update : 2024-04-04 02:13:23(UTC) | 2024-04-04 11:13:23(Seoul)
 ### MainNet
 #### [MainNet configuration](https://networkinfo.solidwallet.io/node_info/MainNet/default_configure.yml)
 |key|value|
@@ -54,4 +54,22 @@
 |REVISION|0x19|
 |SCORE_audit|off|
 |UPDATE_DATE|2024-03-21|
+|description|-|
+### VigoNet
+#### [VigoNet configuration](https://networkinfo.solidwallet.io/node_info/VigoNet/default_configure.yml)
+|key|value|
+|---|---|
+|network_name|VigoNet|
+|cid|0xd3dcd9|
+|nid|0x112|
+|api_endpoint|https://vigo.net.solidwallet.io|
+|p2p_endpoint|vigo.net.solidwallet.io:7100|
+|channel|icon_dex|
+|tracker|https://vigo.tracker.solidwallet.io|
+|docker_tag|iconloop/goloop-icon:v1.4.1|
+|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.4.1|
+|transaction_fee|on|
+|REVISION|0x17|
+|SCORE_audit|on|
+|UPDATE_DATE|2024-04-04|
 |description|-|

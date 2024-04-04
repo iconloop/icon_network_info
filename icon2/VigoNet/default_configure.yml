@@ -26,7 +26,7 @@ reference:
       default: 10
       type: int
     CID:
-      default: '0xd3dcd9'
+      default: '0x1'
       type: str
     CONFIG_LOCAL_FILE:
       default: /goloop/configure.yml
@@ -56,7 +56,7 @@ reference:
       default: indexing
       type: str
     ENDPOINT:
-      default: https://vigo.net.solidwallet.io
+      default: https://preps.net.solidwallet.io
       type: str
     FASTEST_START:
       default: false
@@ -197,7 +197,7 @@ reference:
       default: migration_configure.yml
       type: str
     NID:
-      default: '0x112'
+      default: '0x1'
       type: str
     NTP_REFRESH_TIME:
       default: 180
@@ -251,7 +251,7 @@ settings:
     LOGROTATE_DATE: 14
     LOG_OUTPUT_TYPE: file
     NID: '0x112'
-    SEEDS: 'vigo.net.solidwallet.io:8100,vigo.net.solidwallet.io:8200,vigo.net.solidwallet.io:8300,vigo.net.solidwallet.io:8400,vigo.net.solidwallet.io:8500,vigo.net.solidwallet.io:8600,vigo.net.solidwallet.io:8700'
+    SEEDS: vigo.net.solidwallet.io:8100,vigo.net.solidwallet.io:8200,vigo.net.solidwallet.io:8300,vigo.net.solidwallet.io:8400,vigo.net.solidwallet.io:8500,vigo.net.solidwallet.io:8600,vigo.net.solidwallet.io:8700
   genesis:
     accounts:
     - address: hx5a05b58a25a1e5ea0f1d5715e1f655dffc1fb30a
@@ -269,30 +269,34 @@ settings:
         contentId: hash:{{ziphash:governance}}
         contentType: application/zip
         owner: hx6e1dd0d4432620778b54b2bbc21ac3df961adf89
+    - address: hx73dd8605141de4799b6f28f74689f5758bb9e5aa
+      balance: '0x14adf4b7320334b90000000'
+      name: genesis address
     chain:
       auditEnabled: '0x1'
       blockInterval: '0x7d0'
-      depositTerm: '0x13c680'
       fee:
         stepCosts:
           apiCall: '0x2710'
           contractCall: '0x61a8'
           contractCreate: '0x3b9aca00'
-          contractDestruct: '-0x11170'
-          contractSet: '0x7530'
-          contractUpdate: '0x5f5e1000'
+          contractSet: '0x3a98'
+          contractUpdate: '0x3b9aca00'
           default: '0x186a0'
           delete: '-0xf0'
-          eventLog: '0x64'
-          get: '0x0'
+          deleteBase: '0xc8'
+          get: '0x19'
+          getBase: '0xbb8'
           input: '0xc8'
-          replace: '0x50'
+          log: '0x64'
+          logBase: '0x1388'
+          schema: '0x1'
           set: '0x140'
+          setBase: '0x2710'
         stepLimit:
           invoke: '0x9502f900'
           query: '0x2faf080'
         stepPrice: '0x2e90edd00'
-      feeSharingEnabled: '0x1'
       revision: '0xd'
       roundLimitFactor: '0x9'
       validatorList:
