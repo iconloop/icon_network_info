@@ -11,7 +11,7 @@
 |docker_tag|iconloop/goloop-icon:v1.4.1|
 |goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.4.1|
 |transaction_fee|on|
-|REVISION|0x17|
+|REVISION|0x19|
 |SCORE_audit|on|
 |UPDATE_DATE|2024-04-04|
 |description|-|

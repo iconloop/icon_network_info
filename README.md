@@ -1,6 +1,6 @@
 ## ICON2 Netwrok info
 ```Describes information about the ICON2 network.```
-#### README Update : 2024-04-04 02:13:23(UTC) | 2024-04-04 11:13:23(Seoul)
+#### README Update : 2024-06-28 10:33:03(UTC) | 2024-06-28 19:33:03(Seoul)
 ### MainNet
 #### [MainNet configuration](https://networkinfo.solidwallet.io/node_info/MainNet/default_configure.yml)
 |key|value|
@@ -12,12 +12,12 @@
 |p2p_endpoint|seed-ctz.solidwallet.io:7100|
 |channel|icon_dex|
 |tracker|https://tracker.icon.community/|
-|docker_tag|iconloop/icon2-node:v1.4.0|
-|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.4.0|
+|docker_tag|iconloop/icon2-node:v1.4.2|
+|goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.4.2|
 |transaction_fee|on|
-|REVISION|0x17|
+|REVISION|0x19|
 |SCORE_audit|on|
-|UPDATE_DATE|2024-01-25|
+|UPDATE_DATE|2024-06-28|
 |description|-|
 ### LisbonNet
 #### [LisbonNet configuration](https://networkinfo.solidwallet.io/node_info/LisbonNet/default_configure.yml)
@@ -69,7 +69,7 @@
 |docker_tag|iconloop/goloop-icon:v1.4.1|
 |goloop_version|https://github.com/icon-project/goloop/releases/tag/v1.4.1|
 |transaction_fee|on|
-|REVISION|0x17|
+|REVISION|0x19|
 |SCORE_audit|on|
 |UPDATE_DATE|2024-04-04|
 |description|-|
