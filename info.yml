@@ -1,4 +1,4 @@
-version: "v1.4.1"
+version: "v1.4.2"
 git_env:
   aws_access_key_id: "aws_access_key_id"
   aws_secret_access_key: "aws_secret_access_key"
@@ -29,19 +29,19 @@ network_list:
   - "BerlinNet"
   - "VigoNet"
 MainNet:
-  version: "v1.4.0"
+  version: "v1.4.2"
   only_goloop: false
   info:
     api_endpoint: "https://preps.net.solidwallet.io/"
     p2p_endpoint: "seed-ctz.solidwallet.io:7100"
     channel: "icon_dex"
     tracker: "https://tracker.icon.community/"
-    docker_tag: "iconloop/icon2-node:v1.4.0"
-    goloop_version: "https://github.com/icon-project/goloop/releases/tag/v1.4.0"
+    docker_tag: "iconloop/icon2-node:v1.4.2"
+    goloop_version: "https://github.com/icon-project/goloop/releases/tag/v1.4.2"
     transaction_fee: "on"
-    REVISION: "0x17"
+    REVISION: "0x19"
     SCORE_audit: "on"
-    UPDATE_DATE: "2024-01-25"
+    UPDATE_DATE: "2024-06-28"
     description: "-"
   env:
     CID: "0x1"
@@ -549,7 +549,7 @@ VigoNet:
     docker_tag: "iconloop/goloop-icon:v1.4.1"
     goloop_version: "https://github.com/icon-project/goloop/releases/tag/v1.4.1"
     transaction_fee: "on"
-    REVISION: "0x17"
+    REVISION: "0x19"
     SCORE_audit: "on"
     UPDATE_DATE: "2024-04-04"
     description: "-"
