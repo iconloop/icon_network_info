@@ -70,19 +70,19 @@ MainNet:
               \n\"Hyperconnect the world\""
     IISS: ""
 LisbonNet:
-  version: "v1.4.1"
+  version: "v1.4.4"
   only_goloop: false
   info:
     api_endpoint: "https://lisbon.net.solidwallet.io"
     p2p_endpoint: "seed-lisbon.solidwallet.io:7100"
     channel: "icon_dex"
     tracker: "https://lisbon.tracker.solidwallet.io/"
-    docker_tag: "iconloop/goloop-icon:v1.4.1"
-    goloop_version: "https://github.com/icon-project/goloop/releases/tag/v1.4.1"
+    docker_tag: "iconloop/goloop-icon:v1.4.4"
+    goloop_version: "https://github.com/icon-project/goloop/releases/tag/v1.4.4"
     transaction_fee: "on"
-    REVISION: "0x19"
+    REVISION: "0x1c"
     SCORE_audit: "on"
-    UPDATE_DATE: "2024-03-21"
+    UPDATE_DATE: "2024-11-11"
     description: "-"
   env:
     CID: "0x23cdd9"
@@ -162,19 +162,19 @@ LisbonNet:
       nid: '0x2'
     IISS: ""
 BerlinNet:
-  version: "v1.4.1"
+  version: "v1.4.4"
   only_goloop: false
   info:
     api_endpoint: "https://berlin.net.solidwallet.io"
     p2p_endpoint: "seed-berlin.solidwallet.io:7100"
     channel: "icon_dex"
     tracker: "https://berlin.tracker.solidwallet.io/"
-    docker_tag: "iconloop/icon2-node:v1.4.1"
-    goloop_version: "https://github.com/icon-project/goloop/releases/tag/v1.4.1"
+    docker_tag: "iconloop/icon2-node:v1.4.4"
+    goloop_version: "https://github.com/icon-project/goloop/releases/tag/v1.4.4"
     transaction_fee: "on"
-    REVISION: "0x19"
+    REVISION: "0x1c"
     SCORE_audit: "off"
-    UPDATE_DATE: "2024-03-21"
+    UPDATE_DATE: "2024-11-11"
     description: "-"
   env:
     CID: "0xee03d9"
@@ -539,19 +539,19 @@ WingNet:
       unstakeSlotMax: 1000
     IISS_JSON: /goloop/icon_config.json
 VigoNet:
-  version: "v1.4.1"
+  version: "v1.4.4"
   only_goloop: false
   info:
     api_endpoint: "https://vigo.net.solidwallet.io"
     p2p_endpoint: "vigo.net.solidwallet.io:7100"
     channel: "icon_dex"
     tracker: "https://vigo.tracker.solidwallet.io"
-    docker_tag: "iconloop/goloop-icon:v1.4.1"
-    goloop_version: "https://github.com/icon-project/goloop/releases/tag/v1.4.1"
+    docker_tag: "iconloop/goloop-icon:v1.4.4"
+    goloop_version: "https://github.com/icon-project/goloop/releases/tag/v1.4.4"
     transaction_fee: "on"
     REVISION: "0x19"
     SCORE_audit: "on"
-    UPDATE_DATE: "2024-04-04"
+    UPDATE_DATE: "2024-11-11"
     description: "-"
   env:
     CID: "0xd3dcd9"
