@@ -1,4 +1,4 @@
-version: "v1.4.2"
+version: "v1.4.4"
 git_env:
   aws_access_key_id: "aws_access_key_id"
   aws_secret_access_key: "aws_secret_access_key"
