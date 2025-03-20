@@ -6,7 +6,7 @@ git_env:
   aws_bucket: "aws_bucket"
   aws_cf_id: "aws_cf_id"
 ctx_url: "https://networkinfo.solidwallet.io/node_info"
-restore_url: "https://networkinfo.solidwallet.io/info"
+restore_url: "https://info.dn.solidwallet.io/info"
 restore:
   MainNet_test:
     index_url: "https://icon2-backup-va.s3.amazonaws.com/va/bk/s3sync/MainNet/20220104/file_list.txt?version=0104"
