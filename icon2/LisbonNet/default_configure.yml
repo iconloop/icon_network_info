@@ -50,7 +50,7 @@ reference:
       default: aria2c
       type: str
     DOWNLOAD_URL:
-      default: https://networkinfo.solidwallet.io/info
+      default: https://info.dn.solidwallet.io/info
       type: str
     DOWNLOAD_URL_TYPE:
       default: indexing
